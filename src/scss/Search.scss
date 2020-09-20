@@ -1,0 +1,38 @@
+.search {
+    margin-top: 20px;
+
+    &__input-text,
+    &__input-submit {
+        font-size: 2.4rem;
+        padding: 4px 10px;
+        border: 2px solid crimson;
+    }
+
+    &__input-submit {
+        margin-left: 15px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 400px) {
+    .search {
+        margin-top: 20px;
+
+        &__input-text,
+        &__input-submit {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            font-size: 2rem;
+            padding: 4px 10px;
+            border: 2px solid crimson;
+        }
+
+        &__input-submit {
+            margin: 8px 0 0;
+            background-color: #fff;
+            cursor: pointer;
+        }
+    }
+}

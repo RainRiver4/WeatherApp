@@ -1,0 +1,106 @@
+.result {
+    display: grid;
+    min-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.tile {
+    width: 100%;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+    box-shadow: 0 0 5px 0 rgb(31, 167, 13);
+    border-radius: 3px;
+    font-size: 2.4rem;
+    font-weight: 600;
+    background-color: #000;
+
+    &:nth-child(1) {
+        grid-row: 1/2;
+        grid-column: 1/-1;
+        background-image: url("../../public/images/clouds.jpg");
+        background-size: cover;
+        background-position: bottom;
+        font-size: 3rem;
+        position: relative;
+        .tile__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 3px;
+        }
+
+        .tile__text-p,
+        img {
+            z-index: 1;
+        }
+    }
+
+    &__spn-color {
+        color: crimson;
+        font-weight: 700;
+    }
+}
+
+.swal2-popup {
+    font-size: 1.8rem !important;
+}
+
+@media (max-width: 400px) {
+    .result {
+        grid-template-columns: 1fr;
+    }
+
+    .tile {
+        font-size: 1.8rem;
+        text-align: center;
+        &:nth-child(1) {
+            font-size: 2.4rem;
+            text-align: center;
+        }
+    }
+
+    .swal2-popup {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 512px) {
+    .result {
+        grid-template-columns: 1fr;
+    }
+
+    .swal2-popup {
+        font-size: 1.4rem !important;
+    }
+
+    .tile {
+        font-size: 2.2rem;
+        text-align: center;
+        &:nth-child(1) {
+            font-size: 2.8rem;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .tile {
+        font-size: 2rem;
+        text-align: center;
+        &:nth-child(1) {
+            font-size: 2.6rem;
+            text-align: center;
+        }
+    }
+}
